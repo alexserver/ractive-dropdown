@@ -5,7 +5,9 @@ A Dropdown list component for using with Ractivejs
 Visit [http://alexserver.github.io/ractive-dropdown/demo/](http://alexserver.github.io/ractive-dropdown/demo/).
 
 ## Install
-TODO
+```
+$ npm install ractive-dropdown
+```
 
 ## Usage
 
