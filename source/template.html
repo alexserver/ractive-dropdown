@@ -1,3 +1,20 @@
-<div class="ractive-dropdown">
-  Hello world
+<!-- dropdown -->
+<div class="ractive-dropdown" style="{{#width}}width:{{width}}px;{{/}}">
+  <div class="ractive-dropdown-label" on-click="toggleList">
+    <span>{{displayVal}}</span>
+    <i class="{{#open}}iconvert-new-chevron-up{{else}}iconvert-new-chevron-down{{/}}"></i>
+  </div>
+  {{#open}}
+  <div class="ractive-dropdown-list">
+    <div class="ractive-dropdown-list-float">
+      <ul>
+      {{#list:k}}
+        <li class="ractive-dropdown-list-item" on-click="selectItem:{{k}}">
+          {{list[k]}}
+        </li>
+      {{/}}
+      </ul>
+    </div>
+  </div>
+  {{/}}
 </div>
