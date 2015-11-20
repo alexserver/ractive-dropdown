@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ractive-dropdown</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ractive/0.7.3/ractive.min.js"></script>
+  <script type="text/javascript" src="../ractive-dropdown.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    
+  </div>
+  <script type="text/ractive" id="main_template">
+    Dropdown
+    <dropdown></dropdown>
+  </script>
+  <script type="text/javascript">
+    /*eslint-disable*/
+    var ractive = new Ractive({
+      template: document.querySelector("#main_template").innerHTML,
+      el: "#container",
+      components: {
+        dropdown: RactiveDropdown
+      }
+    });
+  </script>
+</body>
+</html>

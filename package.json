@@ -1,0 +1,37 @@
+{
+  "name": "ractive-dropdown",
+  "version": "1.0.0",
+  "description": "A Dropdown list component to work with Ractivejs",
+  "main": "ractive-dropdown.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "webpack --colors --progress && date -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexserver/ractive-dropdown.git"
+  },
+  "keywords": [
+    "ractive",
+    "component",
+    "ui"
+  ],
+  "author": "Alejandro Gomez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexserver/ractive-dropdown/issues"
+  },
+  "homepage": "https://github.com/alexserver/ractive-dropdown#readme",
+  "dependencies": {
+    "ractive": "^0.7.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.2.0",
+    "babel-loader": "^6.2.0",
+    "css-loader": "^0.23.0",
+    "ractive-loader": "^0.5.6",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.4.2",
+    "webpack": "^1.12.6"
+  }
+}
