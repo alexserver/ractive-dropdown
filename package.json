@@ -1,6 +1,6 @@
 {
   "name": "ractive-dropdown",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A Dropdown list component to work with Ractivejs",
   "main": "ractive-dropdown.min.js",
   "scripts": {
