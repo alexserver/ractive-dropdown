@@ -1,2 +1,43 @@
-div.ractive-dropdown
+// dropdown
+
+$box_shadow_color = #ddd
+
+.ractive-dropdown
   position relative
+  display inline-block
+  
+  .ractive-dropdown-label
+    position relative
+    cursor pointer
+    padding 7px 10px
+    border 1px solid #d3e0e6
+    min-width 200px
+    span
+      line-height 24px
+      height 24px
+      vertical-align baseline
+    i
+      float right
+  .ractive-dropdown-list
+    position relative
+    // height 0
+    .ractive-dropdown-list-float
+      position absolute
+      top 0
+      left 0
+      z-index 2000
+      background-color #ffffff
+      width 100%
+      max-height 400px
+      overflow auto
+      box-shadow 0px 2px 1px $box_shadow_color, -2px 3px 3px $box_shadow_color, 2px 3px 3px $box_shadow_color
+      ul
+        list-style none
+        margin 0
+        padding 0
+        margin-top 8px
+        li
+          padding 7px 10px
+          cursor pointer
+          &:hover
+            background-color #ecf6f8
