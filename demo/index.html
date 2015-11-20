@@ -10,8 +10,15 @@
     
   </div>
   <script type="text/ractive" id="main_template">
-    Dropdown
-    <dropdown></dropdown>
+    Collection:
+    <ul>
+    {{#collection:k}}
+      <li>{{k}} : {{.}}</li>
+    {{/}}
+    </ul>
+    Dropdown:
+    Who's the crazy diamond ?
+    <dropdown list="{{collection}}" value="{{selected}}"></dropdown>
   </script>
   <script type="text/javascript">
     /*eslint-disable*/
@@ -20,6 +27,16 @@
       el: "#container",
       components: {
         dropdown: RactiveDropdown
+      },
+      data: {
+        collection: {
+          '001': 'David Gilmour',
+          '002': 'Roger Waters',
+          '003': 'Richard Wright',
+          '004': 'Nick Mason',
+          '005': 'Syd Barrett'
+        },
+        selected: '005'
       }
     });
   </script>
