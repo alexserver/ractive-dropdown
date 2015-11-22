@@ -1,0 +1,25 @@
+/*Demo page styles*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#container h1 {
+  text-align: center;
+}
+
+#container section {
+  padding: 5px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+
+#container label {
+  padding: 5px;
+  margin-left: 10px;
+}
