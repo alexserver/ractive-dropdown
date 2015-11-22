@@ -2,43 +2,42 @@
 <html>
 <head>
   <title>Ractive-dropdown</title>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ractive/0.7.3/ractive.min.js"></script>
-  <script type="text/javascript" src="../ractive-dropdown.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div id="container">
-    
+    <h1>ractive-dropdown</h1>
+    <div id="ractive_container"></div>
+    <h2>Github Repo</h2>
+    <a href="https://github.com/alexserver/ractive-dropdown#readme">https://github.com/alexserver/ractive-dropdown#readme</a>
   </div>
-  <script type="text/ractive" id="main_template">
-    Collection:
+  <!-- Ractive template -->
+  <script type="text/ractive" id="main_template" >
+    <h2>Collection:</h2>
     <ul>
     {{#collection:k}}
-      <li>{{k}} : {{.}}</li>
+      <li>{{k}} : {{.}} | <button on-click="remove:{{k}}">Del</button></li>
     {{/}}
     </ul>
-    Dropdown:
-    Who's the crazy diamond ?
-    <dropdown list="{{collection}}" value="{{selected}}"></dropdown>
+    <h2>Add one item to the collection</h2>
+    <section>
+      <label>Key: <input type="text" value="{{key}}" /></label>
+      <label>Value: <input type="text" value="{{val}}" /></label>
+      <label><button on-click="add_to">Add</button></label>
+    </section>
+
+    <h2>How it goes: </h2>
+    <p><strong>Q:</strong> Who's the crazy diamond ?</p>
+    <p><strong>A: {{collection[selected]}}</strong></p>
+    <p>
+      <dropdown list="{{collection}}" value="{{selected}}"></dropdown>
+    </p>
   </script>
-  <script type="text/javascript">
-    /*eslint-disable*/
-    var ractive = new Ractive({
-      template: document.querySelector("#main_template").innerHTML,
-      el: "#container",
-      components: {
-        dropdown: RactiveDropdown
-      },
-      data: {
-        collection: {
-          '001': 'David Gilmour',
-          '002': 'Roger Waters',
-          '003': 'Richard Wright',
-          '004': 'Nick Mason',
-          '005': 'Syd Barrett'
-        },
-        selected: '005'
-      }
-    });
-  </script>
+  <!-- Ractive scripts -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ractive/0.7.3/ractive.min.js"></script>
+  <script type="text/javascript" src="../ractive-dropdown.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

@@ -1,16 +1,19 @@
 // dropdown
 
 $box_shadow_color = #ddd
+$border_color = #d3e0e6
+$font_color = #9099a8
 
 .ractive-dropdown
   position relative
   display inline-block
-  
+  color $font_color
+
   .ractive-dropdown-label
     position relative
     cursor pointer
     padding 7px 10px
-    border 1px solid #d3e0e6
+    border 1px solid $border_color
     min-width 200px
     span
       line-height 24px
